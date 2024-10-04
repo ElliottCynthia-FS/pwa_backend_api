@@ -1,10 +1,10 @@
 const signup = (req, res) => {
     console.log(req.body);
-    // const { email, phone, birthday, password } = req.body
-    return res.json({
-        msg: "User has been successfully created!",
-        user: { ...req.body, password: [...req.body.password].map((char) => "●").join('') }
+    return res.status(200).json({
+        status: true,
+        ...req.body,
+        password: req.body.password.split("").map(char => "●").join('')
     })
 }
 
-module.exports = { signup };
+module.exports = { signup }
