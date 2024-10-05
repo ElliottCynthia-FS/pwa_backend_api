@@ -1,7 +1,8 @@
 const express = require('express');
 const app = express();
 const userRouter = require('./routes/users');
-const middlewares = require('./middlewares/users');
+// const middlewares = require('./middlewares/users');
+const middlewares = require('@cynelliott-fs/pwa-validations');
 const { signup } = require('./controllers/users');
 // const morgan = require('morgan');
 
@@ -15,10 +16,10 @@ app.use('/', userRouter);
 
 app.post(
     '/signup', 
-    middlewares.email, 
-    middlewares.phone, 
-    middlewares.birthday, 
-    middlewares.password,
+    middlewares.validateEmail, 
+    middlewares.validatePhone, 
+    middlewares.validateBirthday, 
+    middlewares.validatePassword,
     signup
     );
 
