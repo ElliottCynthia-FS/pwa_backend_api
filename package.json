@@ -3,17 +3,21 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "watch": "nodemon index.js"
+    "watch": "nodemon index.js",
+    "test": "jest --watchAll"
   },
   "author": "Cynthia Elliott",
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "@cynelliott-fs/pwa-validations": "^1.0.0",
+    "@cynelliott-fs/pwa-tests": "^1.0.0",
+    "@cynelliott-fs/pwa-validations": "^1.0.2",
     "body-parser": "^1.20.3",
     "express": "^4.21.0"
   },
   "devDependencies": {
+    "axios": "^1.7.7",
+    "jest": "^29.7.0",
     "morgan": "^1.10.0",
     "nodemon": "^3.1.7"
   }
