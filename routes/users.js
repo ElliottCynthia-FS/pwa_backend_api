@@ -1,13 +1,14 @@
 const express = require('express');
 const router = express.Router();
-const userValidator = require('../middlewares/users');
+// const userValidator = require('../middlewares/users');
+const userValidator = require('@cynelliott-fs/pwa-validations');
 const userCtlr = require('../controllers/users');
 
 router.post("/signup", 
-    userValidator.email, 
-    userValidator.phone, 
-    userValidator.birthday, 
-    userValidator.password, 
+    userValidator.validateEmail, 
+    userValidator.validatePhone, 
+    userValidator.validateBirthday, 
+    userValidator.validatePassword, 
     userCtlr.signup
 );
 

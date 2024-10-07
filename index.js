@@ -6,7 +6,8 @@ const middlewares = require('@cynelliott-fs/pwa-validations');
 const { signup } = require('./controllers/users');
 // const morgan = require('morgan');
 
-app.use(express.urlencoded({ extended: true }));
+// app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
 app.use('/', userRouter);
 

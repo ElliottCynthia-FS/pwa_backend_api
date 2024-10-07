@@ -67,4 +67,36 @@
 
 ---
 
-#### <u>AS A REMINDER:</u> *Everything in this README is taken from the course modules of PWA (Programming of Web Applications WDV-3322 of Full Sail University) directly to explain and give further detail of the repository and the branches included*
+### Assignment *(Week-3)*
+
+*(Taken directly from the course Module)*
+
+- Write a total of seven tests for the backend API
+- Install Jest for testing API
+- Install axios to NPM package in order for tests to properly call API
+
+### The seven required test functions
+
+| Test | Description |
+| --- | -------------------------------------------------------------- |
+| API is running | This test will check to make sure your backend API is up and running at all. You need to test if there is an established connection or not. |
+| Signup endpoint is setup | This will send a POST request to the /signup endpoint and check if it does not respond with a 404 status code. |
+| Signup endpoint works | This test will send a completely valid POST request to our /signup endpoint. We will check to make sure it responds with a 2xx status code which means it worked. | 
+| Email validation works | This test will send only an invalid email to the /signup endpoint to check and see if it responds with a 422 response code. |
+| Phone validation works | This test will send only an invalid phone to the /signup endpoint to check and see if it responds with a 422 response code. |
+| Birthday validation works	| This test will send only an invalid birthday to the /signup endpoint to check and see if it responds with a 422 response code. |
+| Password validation works	| This test will send only an invalid password to the /signup endpoint to check and see if it responds with a 422 response code. |
+
+
+### Extra Information
+
+- Jest official [Website](https://jestjs.io/) and [Docs](https://jestjs.io/docs/getting-started) 
+- Remember: Jest is installed as a dev dependency because it is only used for testing during the development process.  It is not used during production. To install:
+  - `npm install --save-dev jest`
+- Axios official [Website](https://axios-http.com/) and [Docs](https://axios-http.com/docs/intro)
+- Note that it is important to have the axios NPM package installed in order for your tests to properly call your API. If you do not have axios or any other kind of http fetch library installed your tests won't be effective at all. To install:
+  - `npm install axios`
+
+---
+
+#### <u>AS A REMINDER:</u> *Everything in this README is taken from the course modules of PWA (Programming of Web Applications WDV-3322 of Full Sail University) directly to explain and give further detail of the repository and the branches included.  The course overview, assignments, and requirements of the assignments are not my own words.*

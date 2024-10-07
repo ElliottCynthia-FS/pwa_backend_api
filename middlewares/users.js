@@ -5,7 +5,7 @@ const passwordPattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/
 
 const email = (req, res, next) => {
     if (!emailPattern.test(req.body.email)) {
-        return res.status(400).json({
+        return res.status(422).json({
             status: false,  
             msg: "Invalid email address"
         })
@@ -14,7 +14,7 @@ const email = (req, res, next) => {
 }
 const phone = (req, res, next) => {
     if (!phonePattern.test(req.body.phone)) {
-        return res.status(400).json({
+        return res.status(422).json({
             status: false,  
             msg: "Invalid phone number"
         })
@@ -23,7 +23,7 @@ const phone = (req, res, next) => {
 }
 const birthday = (req, res, next) => {
     if (!birthdayPattern.test(req.body.birthday)) {
-        return res.status(400).json({
+        return res.status(422).json({
             status: false,  
             msg: "Invalid birthday"
         })
@@ -32,7 +32,7 @@ const birthday = (req, res, next) => {
 }
 const password = (req, res, next) => {
     if (!passwordPattern.test(req.body.password)) {
-        return res.status(400).json({
+        return res.status(422).json({
             status: false,  
             msg: "Invalid password address"
         })
